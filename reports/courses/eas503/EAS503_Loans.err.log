@@ -31,14 +31,90 @@ from sklearn.feature_selection import VarianceThreshold
 from sklearn.preprocessing import StandardScaler
 ------------------
 
+----- stderr -----
+/home/nolanphi/anaconda3/envs/portfolio/lib/python3.12/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msqlite3[39;00m
-[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01msqlite3[39;00m [38;5;28;01mimport[39;00m Error
+[0;31mImportError[0m                               Traceback (most recent call last)
+Cell [0;32mIn[1], line 7[0m
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mydata_profiling[39;00m [38;5;28;01mimport[39;00m ProfileReport
+[1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m
+[0;32m----> 7[0m [43mmatplotlib[49m[38;5;241;43m.[39;49m[43muse[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mQt5Agg[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      9[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mensemble[39;00m [38;5;28;01mimport[39;00m RandomForestRegressor
 
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/__init__.py:1255[0m, in [0;36muse[0;34m(backend, force)[0m
+[1;32m   1250[0m [38;5;28;01mif[39;00m plt [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[1;32m   1251[0m     [38;5;28;01mtry[39;00m:
+[1;32m   1252[0m         [38;5;66;03m# we need this import check here to re-raise if the[39;00m
+[1;32m   1253[0m         [38;5;66;03m# user does not have the libraries to support their[39;00m
+[1;32m   1254[0m         [38;5;66;03m# chosen backend installed.[39;00m
+[0;32m-> 1255[0m         [43mplt[49m[38;5;241;43m.[39;49m[43mswitch_backend[49m[43m([49m[43mname[49m[43m)[49m
+[1;32m   1256[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m:
+[1;32m   1257[0m         [38;5;28;01mif[39;00m force:
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/pyplot.py:415[0m, in [0;36mswitch_backend[0;34m(newbackend)[0m
+[1;32m    412[0m [38;5;66;03m# have to escape the switch on access logic[39;00m
+[1;32m    413[0m old_backend [38;5;241m=[39m [38;5;28mdict[39m[38;5;241m.[39m[38;5;21m__getitem__[39m(rcParams, [38;5;124m'[39m[38;5;124mbackend[39m[38;5;124m'[39m)
+[0;32m--> 415[0m module [38;5;241m=[39m [43mbackend_registry[49m[38;5;241;43m.[39;49m[43mload_backend_module[49m[43m([49m[43mnewbackend[49m[43m)[49m
+[1;32m    416[0m canvas_class [38;5;241m=[39m module[38;5;241m.[39mFigureCanvas
+[1;32m    418[0m required_framework [38;5;241m=[39m canvas_class[38;5;241m.[39mrequired_interactive_framework
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/backends/registry.py:323[0m, in [0;36mBackendRegistry.load_backend_module[0;34m(self, backend)[0m
+[1;32m    309[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m    310[0m [38;5;124;03mLoad and return the module containing the specified backend.[39;00m
+[1;32m    311[0m 
+[0;32m   (...)[0m
+[1;32m    320[0m [38;5;124;03m    Module containing backend.[39;00m
+[1;32m    321[0m [38;5;124;03m"""[39;00m
+[1;32m    322[0m module_name [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_backend_module_name(backend)
+[0;32m--> 323[0m [38;5;28;01mreturn[39;00m [43mimportlib[49m[38;5;241;43m.[39;49m[43mimport_module[49m[43m([49m[43mmodule_name[49m[43m)[49m
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/importlib/__init__.py:90[0m, in [0;36mimport_module[0;34m(name, package)[0m
+[1;32m     88[0m             [38;5;28;01mbreak[39;00m
+[1;32m     89[0m         level [38;5;241m+[39m[38;5;241m=[39m [38;5;241m1[39m
+[0;32m---> 90[0m [38;5;28;01mreturn[39;00m [43m_bootstrap[49m[38;5;241;43m.[39;49m[43m_gcd_import[49m[43m([49m[43mname[49m[43m[[49m[43mlevel[49m[43m:[49m[43m][49m[43m,[49m[43m [49m[43mpackage[49m[43m,[49m[43m [49m[43mlevel[49m[43m)[49m
+
+File [0;32m<frozen importlib._bootstrap>:1387[0m, in [0;36m_gcd_import[0;34m(name, package, level)[0m
+
+File [0;32m<frozen importlib._bootstrap>:1360[0m, in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+File [0;32m<frozen importlib._bootstrap>:1331[0m, in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+File [0;32m<frozen importlib._bootstrap>:935[0m, in [0;36m_load_unlocked[0;34m(spec)[0m
+
+File [0;32m<frozen importlib._bootstrap_external>:995[0m, in [0;36mexec_module[0;34m(self, module)[0m
+
+File [0;32m<frozen importlib._bootstrap>:488[0m, in [0;36m_call_with_frames_removed[0;34m(f, *args, **kwds)[0m
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/backends/backend_qt5agg.py:7[0m
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m backends
+[1;32m      6[0m backends[38;5;241m.[39m_QT_FORCE_QT5_BINDING [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+[0;32m----> 7[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbackend_qtagg[39;00m [38;5;28;01mimport[39;00m (    [38;5;66;03m# noqa: F401, E402 # pylint: disable=W0611[39;00m
+[1;32m      8[0m     _BackendQTAgg, FigureCanvasQTAgg, FigureManagerQT, NavigationToolbar2QT,
+[1;32m      9[0m     FigureCanvasAgg, FigureCanvasQT)
+[1;32m     12[0m [38;5;129m@_BackendQTAgg[39m[38;5;241m.[39mexport
+[1;32m     13[0m [38;5;28;01mclass[39;00m [38;5;21;01m_BackendQT5Agg[39;00m(_BackendQTAgg):
+[1;32m     14[0m     [38;5;28;01mpass[39;00m
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/backends/backend_qtagg.py:9[0m
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mctypes[39;00m
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtransforms[39;00m [38;5;28;01mimport[39;00m Bbox
+[0;32m----> 9[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mqt_compat[39;00m [38;5;28;01mimport[39;00m QT_API, QtCore, QtGui
+[1;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbackend_agg[39;00m [38;5;28;01mimport[39;00m FigureCanvasAgg
+[1;32m     11[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbackend_qt[39;00m [38;5;28;01mimport[39;00m _BackendQT, FigureCanvasQT
+
+File [0;32m~/anaconda3/envs/portfolio/lib/python3.12/site-packages/matplotlib/backends/qt_compat.py:130[0m
+[1;32m    128[0m         [38;5;28;01mbreak[39;00m
+[1;32m    129[0m     [38;5;28;01melse[39;00m:
+[0;32m--> 130[0m         [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m(
+[1;32m    131[0m             [38;5;124m"[39m[38;5;124mFailed to import any of the following Qt binding modules: [39m[38;5;132;01m{}[39;00m[38;5;124m"[39m
+[1;32m    132[0m             [38;5;241m.[39mformat([38;5;124m"[39m[38;5;124m, [39m[38;5;124m"[39m[38;5;241m.[39mjoin([QT_API [38;5;28;01mfor[39;00m _, QT_API [38;5;129;01min[39;00m _candidates]))
+[1;32m    133[0m         )
+[1;32m    134[0m [38;5;28;01melse[39;00m:  [38;5;66;03m# We should not get there.[39;00m
+[1;32m    135[0m     [38;5;28;01mraise[39;00m [38;5;167;01mAssertionError[39;00m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mUnexpected QT_API: [39m[38;5;132;01m{[39;00mQT_API[38;5;132;01m}[39;00m[38;5;124m"[39m)
+
+[0;31mImportError[0m: Failed to import any of the following Qt binding modules: PyQt5, PySide2
 
