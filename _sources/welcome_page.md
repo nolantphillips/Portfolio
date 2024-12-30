@@ -30,6 +30,7 @@ Current graduate student studying data analysis, machine learning, and statistic
 _SUNY University at Buffalo_  
 *Graduation: August 2025*  
 - Relevant Coursework: Machine Learning, Data Mining, Statistical Modeling
+- GPA: 3.83/4.0
 
 ### **Bachelor of Science in Civil Engineering**  
 _SUNY University at Buffalo_  

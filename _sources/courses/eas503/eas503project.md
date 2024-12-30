@@ -5,8 +5,6 @@ This project was an end-to-end machine learning project. It started by taking da
 ## Relevant Links
 - [Dataset](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data)
 - [MLFlow](https://dagshub.com/nolantphillips/EAS503_Project/experiments)
-- [DockerContainer](http://174.138.82.80:8002/)
-- [Streamlit](https://loansfall2024-8xhdu7zerufthw2akmuvbc.streamlit.app/)
 - [Video](https://buffalo.box.com/s/esqjgarvdhowfni969u720xg368kes91)
 
 ```{tableofcontents}
