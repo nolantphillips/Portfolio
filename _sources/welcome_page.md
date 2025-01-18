@@ -1,7 +1,7 @@
 # Nolan Phillips
 **Data Scientist**
 
-[LinkedIn](www.linkedin.com/in/nolan-phillips-e-i-t-195251275) | [GitHub](https://github.com/nolantphillips) | nolanphillips152@icloud.com | Buffalo, NY
+[LinkedIn](https://linkedin.com/in/nolan-phillips-e-i-t-195251275) | [GitHub](https://github.com/nolantphillips) | nolanphillips152@icloud.com | Buffalo, NY
 
 ---
 
